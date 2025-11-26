@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ABIKA KOMBAT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-container">
+    <header class="header">
+        <h1>ABIKA KOMBAT ⚡</h1>
+        <p class="subtitle">Tap • Upgrade • Complete • Dominate</p>
+    </header>
+
+    <section class="profile">
+        <input id="nickname" type="text" placeholder="Твой ник">
+        <button id="saveNick">Сохранить ник</button>
+    </section>
+
+    <section class="stats">
+        <div class="stat">
+            <span class="label">Рубли</span>
+            <span class="value"><span id="coins">0</span> ₽</span>
+        </div>
+        <div class="stat">
+            <span class="label">Сила клика</span>
+            <span class="value">x<span id="power">1</span> 🔥</span>
+        </div>
+        <div class="stat">
+            <span class="label">Уровень</span>
+            <span class="value"><span id="level">1</span> 🧪</span>
+        </div>
+    </section>
+
+    <div class="clicker-area">
+        <div class="clicker-wrapper">
+            <!-- положи сюда свою картинку: img/abika.png -->
+            <img src="img/abika.png" id="hero" class="hero" alt="ABIKA KOMBAT">
+        </div>
+    </div>
+
+    <div class="upgrades">
+        <h2>Улучшения ⚙️</h2>
+
+        <button class="upgrade-btn" id="upgradePower">
+            💪 Сила клика +1 — <span id="costPower">100</span> ₽
+        </button>
+
+        <button class="upgrade-btn" id="upgradeCritical">
+            💥 Крит шанс +5% — <span id="costCrit">250</span> ₽
+        </button>
+
+        <button class="upgrade-btn" id="upgradeAbikaCrit">
+            💜 Abika-крит +2% (x10) — <span id="costAbika">800</span> ₽
+        </button>
+
+        <button class="upgrade-btn" id="upgradeAuto">
+            🤖 Автотап +1/сек — <span id="costAuto">500</span> ₽
+        </button>
+
+        <button class="upgrade-btn" id="upgradeMulti">
+            📈 Множитель рублей +10% — <span id="costMulti">600</span> ₽
+        </button>
+
+        <button class="upgrade-btn" id="upgradeLevel">
+            🧪 Повысить уровень (+2 к силе) — <span id="costLevel">1000</span> ₽
+        </button>
+    </div>
+
+    <div class="missions">
+        <h2>Миссии 🎯</h2>
+
+        <div class="mission">
+            <span>Сделать 50 тапов 👆</span>
+            <span id="m1progress">0 / 50</span>
+        </div>
+
+        <div class="mission">
+            <span>Заработать 1000 ₽ 💰</span>
+            <span id="m2progress">0 / 1000</span>
+        </div>
+
+        <div class="mission">
+            <span>Прокачать силу клика до 10 🔥</span>
+            <span id="m3progress">0 / 10</span>
+        </div>
+    </div>
+
+    <div class="leaderboard">
+        <h2>Таблица лидеров 🏆</h2>
+        <ol id="leaderboardList"></ol>
+    </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
